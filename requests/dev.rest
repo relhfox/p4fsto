@@ -7,10 +7,10 @@ POST http://localhost:3003/api/blogs
 Content-Type: application/json
 
 {
-    "title": "3 Test Title",
+    "title": "5 Test Title",
     "author": "Test Author",
     "url": "http://test.te",
-    "likes": 15
+    "likes": 105
 }
 
 ### PUT http://localhost:3001/api/persons/65c259d667b226dd5f3ec239 Content-Type: application/json
