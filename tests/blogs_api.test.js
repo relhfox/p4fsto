@@ -20,6 +20,11 @@ describe('get request', () => {
         const response = await api.get('/api/blogs')
         assert.strictEqual(response.body.length, 3)
     })
+
+    test('the id property without low dash', async () => {
+        const response = await api.get('/api/blogs')
+        assert.strictEqual(response.body[0].hasOwnProperty('id'), true)
+    })
 })
 
 after(async () => {
