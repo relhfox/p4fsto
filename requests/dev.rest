@@ -13,10 +13,12 @@ Content-Type: application/json
     "likes": 105
 }
 
-### PUT http://localhost:3001/api/persons/65c259d667b226dd5f3ec239 Content-Type: application/json
+###
+PUT http://localhost:3003/api/blogs/6666f35e4445c94c55b38e5f
+Content-Type: application/json
 
 {
-"name": "Ne", "number": "555555555555"
+    "likes": 777
 }
 
 ###

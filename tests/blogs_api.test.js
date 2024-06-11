@@ -78,6 +78,23 @@ describe('delete request', () => {
     })
 })
 
+describe('update request', () => {
+    test('a blog can be updated', async () => {
+        const blogUpdate = { likes: 777 }
+        const blogsAtStart = await helper.blogsInDb()
+        const blogToUpdate = blogsAtStart[0]
+
+        await api
+            .put(`/api/blogs/${blogToUpdate.id}`)
+            .send(blogUpdate)
+            .expect(200)
+
+        const blogsAtEnd = await helper.blogsInDb()
+        const contents = blogsAtEnd.map(b => b.likes)
+        assert(contents.includes(blogUpdate.likes))
+    })
+})
+
 after(async () => {
     await mongoose.connection.close()
 })
