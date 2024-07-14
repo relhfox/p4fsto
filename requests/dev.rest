@@ -7,10 +7,10 @@ POST http://localhost:3003/api/blogs
 Content-Type: application/json
 
 {
-    "title": "One more Title",
-    "author": "Test Author",
-    "url": "http://test.te",
-    "likes": 105
+    "title": "The first finded user auto added to blogs",
+    "author": "Chippolino",
+    "url": "http://test.ice",
+    "likes": 121
 }
 
 ###
